@@ -1,0 +1,139 @@
+@media screen and ( max-width: 1000px ) {
+  h1{
+    color: red;
+      }
+}
+
+@media screen and ( max-width: 700px ) {
+  h1{
+    color: blue;
+      }
+}
+
+
+
+/*kolega*/
+
+
+
+/*HTM*/
+
+<div style="display: flex; width: 100%; height: auto; align-items: center;align-content:center;align-text:center;">
+    <div id="logo-container" style="margin-right: 35px;"></div>
+    <h1>Prehľad spotreby energií</h1>
+</div>
+
+/*CSS*/
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/public/fonts/montserrat-v29-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/public/fonts/montserrat-v29-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+body, html, h1, h2, p, div {
+  font-family: 'Montserrat', sans-serif;
+}
+#logo-container {
+    /* Default logo for larger screens */
+    background-image: url('/public/img/Daitable_logo_white.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    width: 120px;
+    margin-right: 35px;
+}
+
+h1 {
+    font-size: 2em;
+    /* Make the header smaller on mobile */
+    margin-top: 5px;
+    /* Adjust top margin if needed */
+}
+
+@media (max-width: 768px) {
+    #logo-container {
+        /* Mobile logo */
+        background-image: url('/public/img/Daitable_main_logo.svg');
+        height: 30px;
+        /* Adjust height for mobile */
+    }
+
+    h1 {
+        font-size: 1.5em;
+        /* Make the header smaller on mobile */
+        margin-top: 5px;
+        /* Adjust top margin if needed */
+    }
+}
+
+/*AI*/
+
+/* Základné štýly pre všetky zariadenia (Mobile-First) */
+body {
+    font-size: 16px;
+    padding: 10px;
+}
+
+.container {
+    width: 100%; /* Plná šírka pre mobily */
+}
+
+/* --- Breakpoint 1: Pre malé tablety a väčšie mobily --- */
+@media (min-width: 576px) { /* Alebo 600px, záleží od obsahu */
+    body {
+        font-size: 17px;
+    }
+    .container {
+        max-width: 540px; /* Obmedz šírku kontajnera */
+    }
+}
+
+/* --- Breakpoint 2: Pre tablety na šírku a menšie laptopy --- */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 720px;
+    }
+    /* Tu môžeš zmeniť rozloženie, napr. pomocou Flexbox alebo Grid */
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* --- Breakpoint 3: Pre laptopy a stredné desktopy --- */
+@media (min-width: 992px) {
+    body {
+        font-size: 19px;
+    }
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* --- Breakpoint 4: Pre väčšie desktopy a veľké monitory --- */
+@media (min-width: 1200px) {
+    body {
+        font-size: 20px;
+    }
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* --- Prípadne pre extra veľké monitory --- */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
