@@ -48,6 +48,7 @@ h1 {
   .logo-mobile {
       display: block;
       height: clamp(40px, 8vw, 80px);
+  }
 }
 
 @media (min-width: 992px) {
