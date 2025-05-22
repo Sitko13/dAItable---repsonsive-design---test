@@ -1,41 +1,59 @@
 h1 {
     color: black;
-    font-size: 2em; 
+    font-size: clamp(1.5rem, 2.5vw, 3rem);  
     font-family: 'Montserrat', sans-serif;
+    margin: 0; 
 }
 
+.header-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 20px;
+    padding: 10px;
+}
 
-@media (min-width: 576px) {
-    h1{
-      color: red;
-      font-size: 2.5em;
+.logo-desktop,
+
+.logo-mobile {
+    height: clamp(40px, 8vw, 80px);
+    width: auto;
+}
+
+.logo-mobile {
+    display: none;
     }
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.2rem; /* menšie písmo pre mobil */
+  }
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: block;
+    height: 20px;
+  }
 }
 
-@media (min-width: 768px) {
-    h1{
-      color: blue;
-      font-size: 3em;
+@media (min-width: 577px) and (max-width: 991px) {
+    h1 {
+        color: blue; 
+    }  
+    .logo-desktop {
+        display: none;
+    }
+    .logo-mobile {
+        display: block;
     }
 }
 
 @media (min-width: 992px) {
-    h1{
-      color: purple;
-      font-size: 3em;
+    h1 {
+        color: green; 
     }
 }
 
-@media (min-width: 1200px) {
-    h1{
-      color: yellow;
-      font-size: 3em;
-    }
-}
-
-@media (min-width: 1400px) {
-    h1{
-      color: green;
-      font-size: 3em;
-    }
-}
