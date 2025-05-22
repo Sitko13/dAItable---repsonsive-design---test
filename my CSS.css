@@ -1,0 +1,63 @@
+h1 {
+  color: black;
+  font-size: clamp(1.5rem, 2.5vw, 3rem);  
+  font-family: 'Montserrat', sans-serif;
+  margin: 0; 
+}
+
+.header-container {
+  display: flex;
+  flex-wrap: nowrap;          
+  align-items: center;         
+  justify-content: flex-start; 
+  gap: 20px;                   
+  padding: 10px;
+  text-align: left;
+}
+
+.logo-desktop,
+.logo-mobile {
+  height: clamp(40px, 8vw, 80px);
+  width: auto;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .logo-desktop {
+      display: none;
+  }
+  .logo-mobile {
+      display: block;
+      height: 30px;   
+  }
+  h1 {
+      font-size: 1.2rem;  
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  h1 {
+      color: blue; 
+  }
+  .logo-desktop {
+      display: none;
+  }
+  .logo-mobile {
+      display: block;
+      height: clamp(40px, 8vw, 80px);
+}
+
+@media (min-width: 992px) {
+  h1 {
+      color: green; 
+  }
+  .logo-desktop {
+      display: block;
+  }
+  .logo-mobile {
+      display: none;
+  }
+}
